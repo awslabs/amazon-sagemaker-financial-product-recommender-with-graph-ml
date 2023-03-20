@@ -76,7 +76,9 @@ To run though a notebook cell by cell, type Shift-Enter repeatedly.
 
 To go back to a particular cell, select the cell or use the up/down keys.
 
-To run the full notebook in one command, select the menu item Run -> Run All
+To run a full notebook in one command, select the menu item Run -> Run All
+
+To restart a notebook, select the menu item Kernel -> Restart Kernel
 
 ## References
 
