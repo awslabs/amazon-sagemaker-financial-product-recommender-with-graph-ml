@@ -1,40 +1,57 @@
-# Graph Reco Workshop
+# Financial Product Recommender with Graph ML
 
 Institutional investment managers are required by the US Securities and Exchange Commission (SEC) 
 to report their security holdings quarterly in form 13F.
 In this workshop we will use these public reports to deduct aggregate trades by investors and 
 build a trade recommendation model with graph machine learning.
 
-To run the workshop you first need to prepare the environment, then you can go through the python notebooks from 10 to 50.
+To run the notebooks you first need to prepare the environment, then you can go through the python notebooks.
 
 We use data from https://www.sec.gov and https://dataverse.harvard.edu (see reference).
 
+
 ## Prepare the environment
 
-In this section we start a notebook instance and prepare the instance environment.
+Start a notebook instance and prepare the instance environment.
 
-Go to Services -> Amazon SageMaker -> Notebook -> Notebook instances -> Create notebook instance 
-    
+In you AWS account, go to Services -> Amazon SageMaker -> Notebook -> Notebook instances -> Create notebook instance 
+
+You need to input a name and an instance type. Optionally, you can increase the volume size. 
 ```
 Notebook instance name: <enter a name for your instance here>
 Notebook instance type: ml.c5.4xlarge
+Additional configuration -> Volume size in GB: 10
 ```
+
+You can use the instances below. They differ in terms of CPU capacity but have the same memory capacity (32GB).
+
+- ml.c5.4xlarge (compute optimized)
+- ml.m5.2xlarge (standard instance)
+- ml.r5.xlarge (memory optimized)
+
 
 When the instance is up and running, click Open JupyterLab, then open a Launcher with '+'
 
 In the Launcher, click on Terminal, and run the following commands:
 
 ```
+cd ~/SageMaker 
 git clone https://github.com/awslabs/amazon-sagemaker-financial-product-recommender-with-graph-ml.git graph-reco
 cd graph-reco/reco   
 source ./00_prep_env.sh
 ```
 
+The script above does 2 things:
+
+- Update the conda *python3* environment with parquet support
+- Create a new conda environment *dglke* for graph ML
+
+
 ## Go through the notebooks
 
-Once the environment is prepared, open the folder *reco*. 
+Once the environment is prepared, go to the file browser (left pane) and open the folder *reco*.
 
-Now you can run the notebooks under from 10 to 50:
+Now you can run the notebooks from 10 to 50:
 
 ```
 10_get_data.ipynb
@@ -44,11 +61,10 @@ Now you can run the notebooks under from 10 to 50:
 50_cleanup.ipynb (optional)
 ```
 
-10, 20, 30 must be run in sequence. 
-
-40 is optional and can be run at the same time as 30. 
-
-50 is optional, run it to restart from scratch or cleanup when you are done. 
+NB:
+- 10, 20, 30 must be run in sequence
+- 40 is optional and can be run at the same time as 30
+- 50 is optional, run it to restart from scratch or cleanup when you are done
 
 ## Notebook tips
 

@@ -141,3 +141,4 @@ reco/datasets/
 reco/models/
 reco/source_data/
 reco/source_dir/
+reco/training_job/
