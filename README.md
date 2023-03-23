@@ -82,7 +82,7 @@ To restart a notebook, select the menu item Kernel -> Restart Kernel
 
 ## Learn more about Graph ML
 
-The underlying models used in the workshop are explained in the [DKL-KE documentation](https://dglke.dgl.ai/doc/).
+The underlying models used in the workshop are explained in the [DKL-KE documentation](https://dglke.dgl.ai/doc/kg.html).
 
 ## References
 
