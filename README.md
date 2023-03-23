@@ -14,7 +14,7 @@ We use data from https://www.sec.gov and https://dataverse.harvard.edu (see refe
 
 Start a notebook instance and prepare the instance environment.
 
-In you AWS account, go to Services -> Amazon SageMaker -> Notebook -> Notebook instances -> Create notebook instance 
+In your AWS account, go to Services -> Amazon SageMaker -> Notebook -> Notebook instances -> Create notebook instance 
 
 You need to input a name and an instance type. Optionally, you can increase the volume size. 
 ```
