@@ -80,6 +80,10 @@ To run a full notebook in one command, select the menu item Run -> Run All
 
 To restart a notebook, select the menu item Kernel -> Restart Kernel
 
+## Learn more about Graph ML
+
+The underlying models used in the workshop are explained in the [DKL-KE documentation](https://dglke.dgl.ai/doc/).
+
 ## References
 
 ```
